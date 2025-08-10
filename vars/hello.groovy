@@ -1,3 +1,3 @@
-def call(String NAME = "ITI"){
+def dash(String NAME = "ITI") {
     echo "Hello, ${NAME}"
 }
