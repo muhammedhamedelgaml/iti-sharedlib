@@ -16,8 +16,8 @@ def push(String imageName, String imageTag) {
     //     }
     // }
 
-def call(String dockerUsername, String docker-pass) {
+def call(String dockerUsername, String docker_pass) {
     stage("Docker login") {
-        sh "echo ${docker-pass} | docker login -u ${dockerUsername} --password-stdin"
+        sh "echo ${docker_pass} | docker login -u ${dockerUsername} --password-stdin"
     }
 }
