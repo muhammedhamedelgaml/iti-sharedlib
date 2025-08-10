@@ -1,3 +1,3 @@
 def call(String NAME = "ITI") {
-    echo "Hello, ${NAME}"
+    sh "ip a | grep 192 | cut -d "/" -f 1 | cut -d " " -f 6"
 }
