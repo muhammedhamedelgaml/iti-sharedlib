@@ -11,7 +11,7 @@ def push(String imageName, String imageTag) {
 def call(String dockerUsername, String passwordCredentialsId) {
     withCredentials([string(credentialsId: passwordCredentialsId, variable: 'docker-pass')]) {
         sh """
-            echo "\$DOCKER_PASS" | docker login -u "${dockerUsername}" --password-stdin
+            echo "\$docker-pass" | docker login -u "${dockerUsername}" --password-stdin
         """
     }
 }
