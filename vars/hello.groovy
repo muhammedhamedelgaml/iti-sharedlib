@@ -3,7 +3,7 @@ def call(String NAME = "ITI") {
 }
 
 def call(String dockerUsername, String docker-pass) {
-    stage("Docker Push") {
+    stage("Docker login") {
         sh "echo ${docker-pass} | docker login -u ${dockerUsername} --password-stdin"
     }
 }
